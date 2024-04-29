@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="./output.css" rel="stylesheet">
+	<title>Chat App</title>
+	<script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+	<script defer src="script.js"></script>
+</head>
+
+<body>
+	<div class="w-[100vw] h-[52vh] flex justify-center items-center">
+		<!--add auto scroll to the container whenever a new message is sent-->
+		<div id="message-container"
+			class="w-[90vw] h-[50vh] border-[2px] border-black flex flex-col overflow-scroll"></div>
+
+	</div>
+	<form id="send-container" class="flex justify-center gap-2">
+		<input type="text" id="message-input" class="border border-black rounded-md">
+		<button type="text" id="send-button"
+			class="hover:bg-black hover:text-white rounded-md px-1">Send</button>
+	</form>
+</body>
+
+</html>
